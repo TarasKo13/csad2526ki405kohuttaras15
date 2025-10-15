@@ -1,0 +1,93 @@
+User:
+
+Batch script for Windows CI: create and enter a new 'build' directory, run 'cmake ..' for configuration, 
+run 'cmake --build .' for building, and finally run 'ctest --output-on-failure'. 
+Ensure the script checks for errors after each major command.
+
+Copilot:
+
+I'll add a todo entry for creating the CI batch script, write the ci.bat file with error checks after each step, 
+then mark the todo completed. I'll start by adding the todo as in-progress.
+
+Added 1 todo
+
+I'll create ci.bat at the repository root with proper PowerShell/cmd style commands for Windows batch, 
+checking exit codes after each step and exiting on failure. Expected outcome: ci.bat added.
+
+I added a Windows CI batch script ci.bat that creates a fresh build directory, runs CMake configure, 
+builds the project, and runs tests with error checks after each major step.
+
+What I added
+
+ci.bat at repository root with these behaviors:
+Removes any existing build directory.
+Creates build and enters it.
+Runs cmake .. and fails fast if configure fails.
+Runs cmake --build . and fails fast if the build fails.
+Runs ctest --output-on-failure and fails if any tests fail.
+Prints clear [CI] and [CI][ERROR] messages for each step.
+Quick look — ci.bat contents (summary)
+
+Remove old build if present
+mkdir build && cd build
+cmake .. (error check)
+cmake --build . (error check)
+ctest --output-on-failure (error check)
+How to run
+
+From PowerShell or CMD at the repository root run:
+In CMD:
+ci.bat
+In PowerShell:
+ci.bat
+Notes and follow-ups
+
+The script uses the default CMake generator. If you want it to use a specific generator (MinGW, Ninja, or Visual Studio), I can add an optional environment variable or a parameter to the script to select the generator and configuration (Release/Debug).
+I can also add logging to a file or make the script more robust (detect available generators, set CMake flags, or run with parallel jobs).
+I updated the todo list marking this task completed.
+Want me to:
+
+User: 
+
+Shell script that runs CI: clean existing build directory, create and enter a new 'build' directory, 
+run 'cmake ..' for configuration, run 'cmake --build .' for building, and finally run 'ctest --output-on-failure'. 
+The script must exit immediately if any command fails.
+
+Copilot:
+
+I'll add a todo for creating a shell CI script, then create ci.sh at the repository root containing 
+an error-strict bash script that cleans, configures, builds and runs tests. Finally I'll mark the todo complete.
+
+Added 1 todo
+
+I'll create ci.sh at the repository root with strict bash flags, perform cleanup, run cmake and build, 
+then ctest. I'll ensure it's portable (works on Linux/macOS/WSL) and exits on any error.
+
+
+Completed (9/9) Add CI shell script
+
+Done — I added a simple CI shell script ci.sh that runs the requested steps and exits if any command fails.
+
+What I created
+
+ci.sh at the repository root:
+Uses strict bash flags: set -euo pipefail
+Removes any existing build directory
+Creates and enters build
+Runs cmake .. to configure
+Runs cmake --build . to build
+Runs ctest --output-on-failure to run tests
+Prints status messages and exits immediately on any failure
+How to use
+
+On Linux, macOS, or WSL:
+
+Make it executable once: chmod +x ci.sh
+Run: ci.sh
+On Windows with WSL or Git Bash you can also run ci.sh.
+
+Notes and next steps
+
+The script uses CMake's default generator. If you need to force a generator (MinGW, Ninja, Visual Studio), 
+I can add optional environment variables or command-line flags.
+I can also add logging to a file, a verbose mode, or a CMD/PowerShell wrapper that calls ci.sh from Windows.
