@@ -1,0 +1,33 @@
+User:
+Generate a basic CMakeLists.txt for a C++
+Copilot:
+I'll update the todo list, read the current CMakeLists.txt, then replace it with a minimal CMake setup so the project builds src/main.cpp. 
+Expected outcome: CMakeLists.txt updated to a small CMake project that builds hello. I'll update the todo states as I go.
+
+Completed (1/4) Create source files
+
+Now I'll read the existing CMakeLists.txt to edit it appropriately. Expected outcome: get current contents to modify.
+
+Read CMakeLists.txt
+
+I'm going to add a minimal CMakeLists.txt that builds src/main.cpp as an executable; expected outcome: 
+CMakeLists.txt contains a simple CMake project targeting C++17 and an hello executable. I'll apply the change now.
+
+CMakeLists.txt +14-1
+
+Progress update: I added CMakeLists.txt. Next I'll mark the todo item completed and provide build/run instructions.
+
+Completed (4/4) Create CMakeLists
+
+I'll add a minimal CMake setup and give you build/run instructions next.
+
+Actions taken
+Created src/main.cpp with a minimal Hello World program.
+Created README.md with build/run instructions.
+Added a minimal CMakeLists.txt that builds src/main.cpp as an executable named hello.
+
+Files changed:
+
+src/main.cpp — minimal Hello World source
+README.md — build and run instructions
+CMakeLists.txt — simple CMake project (C++17) building hello

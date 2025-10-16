@@ -1,0 +1,37 @@
+User: 
+
+GitHub Actions workflow in YAML. Name: Cross-Platform CMake CI. 
+Trigger on push/pull_request to branches containing 'develop' or 'master'. 
+Create a job 'cross_build' that uses a strategy matrix to run on 'ubuntu-latest', 'windows-latest', 
+and 'macos-latest'. The steps must check out the code, run the CI script ci.sh or ci.bat depending on the OS, 
+and then execute a deploy step.
+
+Copilot:
+
+I'm going to update the existing workflow file ci.yml in-place to add a cross-platform matrix job that checks out the code, 
+runs the appropriate CI script for each OS, and then runs a deploy step. 
+Expected outcome: the YAML defines the job 'cross_build' with matrix for ubuntu, windows, and macOS.
+
+I'll replace the workflow file with a fixed YAML that uses spaces (no tabs), matrix OS entries, 
+and steps to run ci.sh on Linux/macOS and ci.bat on Windows, then a deploy placeholder. I'll write the updated content now.
+
+Done — I updated ci.yml to add the "Cross-Platform CMake CI" workflow you requested.
+
+What I changed
+
+Workflow name: Cross-Platform CMake CI
+Triggers: push and pull_request on branches matching develop and master
+Job: cross_build
+Matrix: runs on ubuntu-latest, windows-latest, macos-latest
+Steps:
+Checkout (actions/checkout@v4)
+Run ci.sh on Linux/macOS (uses bash)
+Run ci.bat on Windows (uses cmd)
+Deploy placeholder step (echo — replace with your actual deploy)
+Notes and next steps
+
+The workflow assumes ci.sh and ci.bat are present at the repo root (they are).
+The deploy step is a placeholder; tell me what deployment action you want (upload artifacts, publish a release, push to a server) and I’ll wire it up.
+If you want to pass a generator (e.g., use a specific CMake generator per OS), I can add environment variables or matrix entries for that.
+If you prefer to run CMake steps directly in the workflow instead of calling the scripts, I can expand the steps per OS.
+Shall I implement a real deploy step (artifact upload, GitHub Releases, or a custom deployment)?
