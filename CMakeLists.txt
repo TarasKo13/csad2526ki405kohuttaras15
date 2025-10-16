@@ -35,6 +35,14 @@ if(EXISTS "${CMAKE_SOURCE_DIR}/tests/unit_tests.cpp")
   add_executable(run_tests tests/unit_tests.cpp)
   target_include_directories(run_tests PRIVATE ${CMAKE_SOURCE_DIR})
   target_link_libraries(run_tests PRIVATE math_lib gtest_main)
-  add_test(NAME run_tests COMMAND run_tests)
+  # Ensure the test executable is placed in the config-specific runtime directory
+  set_target_properties(run_tests PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_CFG_INTDIR}"
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_CFG_INTDIR}"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_CFG_INTDIR}"
+  )
+
+  # Register test using generator expression so CTest will use the exact target file path
+  add_test(NAME run_tests COMMAND $<TARGET_FILE:run_tests>)
 endif()
 
