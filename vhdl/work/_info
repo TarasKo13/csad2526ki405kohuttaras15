@@ -1,0 +1,169 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Taras/csad2526ki405kohuttaras15/vhdl
+Erx
+Z1 w1762355365
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8rx.vhd
+Z6 Frx.vhd
+l0
+L11
+VdSIS50=lEkY^PUzefg[US0
+!s100 PSl8gFVhEP<;dbKmGA[H]3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1762361515
+!i10b 1
+Z9 !s108 1762361515.000000
+Z10 !s90 -reportprogress|300|rx.vhd|
+Z11 !s107 rx.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z13 DEx4 work 2 rx 0 22 dSIS50=lEkY^PUzefg[US0
+l29
+L25
+VdVFP9oiib^95[A>IAJ@mL0
+!s100 X9]zfS3Enb>XDOzQ3]SJ00
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Espi_master
+R1
+R2
+R3
+R4
+R0
+Z14 8spi_master.vhd
+Z15 Fspi_master.vhd
+l0
+L27
+VRWO029Ni@<IQeJ[Gj_e?P2
+!s100 iXCz?:3FeobH<4LSmDEbo2
+R7
+32
+Z16 !s110 1762361548
+!i10b 1
+Z17 !s108 1762361548.000000
+Z18 !s90 -reportprogress|300|spi_master.vhd|
+Z19 !s107 spi_master.vhd|
+!i113 1
+R12
+Artl
+R13
+Z20 DEx4 work 2 tx 0 22 fa<gjfSkDmj4S`Ad1Vk]W2
+R2
+R3
+R4
+Z21 DEx4 work 10 spi_master 0 22 RWO029Ni@<IQeJ[Gj_e?P2
+l61
+L44
+VoE5mBHcdS2lQ<ON3GngCL1
+!s100 V>2P@3>K03@hz5M@lVz?k2
+R7
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+Etb_spi
+Z22 w1762361052
+R2
+R3
+R4
+R0
+Z23 8testbench.vhd
+Z24 Ftestbench.vhd
+l0
+L13
+V44J^NLhmzhiDT6V:_PZ742
+!s100 C>zmUC3`L1eZ1N^T6faKg2
+R7
+32
+Z25 !s110 1762361573
+!i10b 1
+Z26 !s108 1762361573.000000
+Z27 !s90 -reportprogress|300|testbench.vhd|
+Z28 !s107 testbench.vhd|
+!i113 1
+R12
+Asim
+R21
+R2
+R3
+R4
+DEx4 work 6 tb_spi 0 22 44J^NLhmzhiDT6V:_PZ742
+l36
+L16
+V091i]9baM_^Ez>ehef0j52
+!s100 WO0l[nbM[^`@<4bUAg3f@0
+R7
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R12
+Etx
+Z29 w1762355399
+R2
+R3
+R4
+R0
+Z30 8tx.vhd
+Z31 Ftx.vhd
+l0
+L20
+Vfa<gjfSkDmj4S`Ad1Vk]W2
+!s100 K_Rjg5UFS@Un3?CWfW=_;1
+R7
+32
+Z32 !s110 1762361528
+!i10b 1
+Z33 !s108 1762361528.000000
+Z34 !s90 -reportprogress|300|tx.vhd|
+Z35 !s107 tx.vhd|
+!i113 1
+R12
+Artl
+R2
+R3
+R4
+R20
+l39
+L34
+VUeLbI;lf7X`FWE2cOAi?W3
+!s100 _bY31J:aQ6mGYSS]YZ52R0
+R7
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R12
